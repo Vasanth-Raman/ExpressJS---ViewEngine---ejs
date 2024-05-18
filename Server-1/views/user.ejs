@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User-Profile</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .conatainer {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+          rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        width: max-content;
+        background-color: beige;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .profile-pic {
+        border: 3px solid black;
+        border-radius: 50%;
+      }
+      .profile-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      .premium-user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .premium-user p {
+        border-radius: 5px;
+        border: 2px solid red;
+        height: 20px;
+        width: fit-content;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conatainer">
+      <div class="premium-user">
+        <% if(isPremium){%>
+        <p>PREMIUM 🌟</p>
+        <% }%>
+      </div>
+      <div>
+        <img class="profile-pic" src="<%=avatar%>" />
+      </div>
+
+      <div class="profile-details">
+        <h1><%=first_name%> <%=last_name%></h1>
+        <p><%=email%></p>
+      </div>
+    </div>
+  </body>
+</html>
